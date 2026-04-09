@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iker Augusto — Técnico IT</title>
+    <meta name="description"
+        content="Portfolio profesional de Técnico en Sistemas Microinformáticos y Redes (SMR). Disponible para incorporación en junio 2025." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- ── Read progress bar ── -->
+    <div id="read-progress" aria-hidden="true"></div>
+
+    <!-- ── Grain / noise overlay ── -->
+    <div id="noise-overlay" aria-hidden="true"></div>
+
+    <!-- ── Magnetic Cursor ── -->
+    <div id="cursor-dot" aria-hidden="true"></div>
+    <div id="cursor-ring" aria-hidden="true"></div>
+
+    <!-- ── Warping Grid Background ── -->
+    <div id="warping-grid" aria-hidden="true"></div>
+
+    <!-- ═══════════════════════════════ LOADER ═════════════════════════════════ -->
+    <div id="loader" class="loader">
+        <div class="loader__panel loader__panel--left"></div>
+        <div class="loader__panel loader__panel--right"></div>
+        <div class="loader__content">
+            <div class="loader__terminal">
+                <p class="loader__line" id="ll1"><span class="loader__prompt">$</span> <span></span></p>
+                <p class="loader__line loader__line--ready" id="ll4">[ SISTEMA LISTO <span
+                        class="loader__cursor">_</span> ]</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════ NAVBAR ═════════════════════════════════ -->
+    <header class="nav" id="nav">
+        <div class="nav__inner wrap">
+            <a href="#inicio" class="nav__logo">Iker Augusto</a>
+            <nav class="nav__links">
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#proyectos">Mis proyectos</a>
+                <a href="#valor">Mi valor</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <button class="nav__burger" aria-label="Abrir menú" id="burger">
+                <span></span><span></span>
+            </button>
+        </div>
+        <!-- Mobile -->
+        <div class="nav__mobile" id="mobileMenu">
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#proyectos">Mis proyectos</a>
+            <a href="#valor">Mi valor</a>
+            <a href="#contacto">Contacto</a>
+            <a href="https://drive.google.com/file/d/1X0GqgfubbgWhrhbV8PtTkphD7-yjmd_S/view?usp=drive_link"
+                download>Descargar CV (PDF)</a>
+            <a href="https://www.linkedin.com/in/iker-augusto-espinosa-5619a6345" target="_blank"
+                rel="noopener">LinkedIn ↗</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ═══════════════════════════════ HERO ══════════════════════════════════ -->
+        <section id="inicio" class="hero wrap">
+            <canvas id="hero-canvas" aria-hidden="true"></canvas>
+            <h1 class="hero__name">Iker<br>Augusto</h1>
+            <div class="hero__row">
+                <p class="hero__role">Técnico IT</p>
+            </div>
+            <div class="hero__scroll">
+                <span>Scroll</span>
+                <div class="hero__scroll-line"></div>
+            </div>
+        </section>
+
+        <hr class="divider" />
+
+        <!-- ═══════════════════════════════ SOBRE MÍ ══════════════════════════════ -->
+        <section id="sobre-mi" class="about section wrap">
+            <div class="about__header">
+                <p class="label">01 / Sobre mí</p>
+                <h2 class="section-title">Quién soy<br>y qué me mueve.</h2>
+            </div>
+            <div class="about__body">
+
+                <div class="about__text">
+                    <p>
+                        Soy Iker Augusto Espinosa, Técnico en Sistemas Microinformáticos y Redes con residencia en
+                        Sitges
+                        (Barcelona). Mi trayectoria profesional se define por una combinación de rigor técnico y una
+                        visión optimista de la tecnología como motor de eficiencia empresarial. Recientemente he
+                        titulado mi formación de Grado Medio (SMR) en el C.E. STUCOM, consolidando una base sólida en la
+                        administración de sistemas, seguridad y arquitectura de redes.
+                    </p>
+                    <p>
+                        Mi pasión por la informática nació de la curiosidad por los sistemas complejos y ha evolucionado
+                        hacia una especialización en la continuidad de negocio y la seguridad de datos. Durante mi etapa
+                        práctica en Diamond Esport Center, gestioné infraestructuras de alto rendimiento, resolviendo
+                        incidencias críticas y optimizando la disponibilidad de los equipos bajo demanda técnica
+                        exigente. Esta experiencia me permitió perfeccionar mis competencias en diagnóstico de hardware
+                        y soporte especializado.
+                    </p>
+                    <p>
+                        Me defino como un profesional organizado, resolutivo y con gran capacidad de comunicación,
+                        habilidades que me han permitido integrarme con éxito en equipos de trabajo dinámicos durante
+                        mis prácticas. Tras haber completado con éxito mi etapa en SMR, mi objetivo para el próximo año
+                        es seguir ampliando mi perfil técnico cursando el Grado Superior en Desarrollo de Aplicaciones
+                        Web (DAW). Busco una oportunidad laboral, preferiblemente a media jornada o en horario
+                        compatible, que me permita compaginar mis estudios con la práctica laboral.
+                    </p>
+
+
+                    <!-- Animated stats -->
+                    <div class="about__stats">
+                        <div class="stat-item">
+                            <p class="stat-num" data-target="2">0</p><span class="stat-suffix">+</span>
+                            <p class="stat-label">Años de formación</p>
+                        </div>
+                        <div class="stat-item">
+                            <p class="stat-num" data-target="9">0</p><span class="stat-suffix"></span>
+                            <p class="stat-label">Proyectos reales</p>
+                        </div>
+                        <div class="stat-item">
+                            <p class="stat-num" data-target="100">0</p><span class="stat-suffix">%</span>
+                            <p class="stat-label">Compromiso</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider" />
+
+        <!-- ═══════════════════════════════ PROYECTOS ══════════════════════════════ -->
+        <section id="proyectos" class="projects section wrap">
+            <div class="section__header">
+                <p class="label">02 / Mis proyectos</p>
+                <h2 class="section-title">Experiencia aplicada,<br>no solo teoría.</h2>
+            </div>
+
+            <div class="projects__grid">
+
+                <!-- ── Proyecto destacado ───────────────────────────────── -->
+                <article class="project-card project-card--featured">
+
+                    <!-- Panel izquierdo: visual + meta -->
+                    <div class="project-card__aside">
+                        <div class="project-card__num">01</div>
+                        <div class="project-card__visual">
+                            <div class="project-card__visual-grid"></div>
+                            <div class="project-card__badges">
+                                <span class="badge badge--accent">FCT</span>
+                                <span class="badge">Ene – Mar 2026</span>
+                                <span class="badge">VanLuker Systems</span>
+                            </div>
+                        </div>
+                        <p class="project-card__team">Equipo: VanLuker Systems<br>
+                            <span>Rol: Administrador de Sistemas y Redes</span>
+                        </p>
+                    </div>
+
+                    <!-- Panel derecho: contenido -->
+                    <div class="project-card__main">
+                        <p class="project-card__tag">Infraestructura Híbrida · Seguridad · E-commerce</p>
+                        <h3 class="project-card__title">Infraestructura TIC Híbrida<br>para E-commerce</h3>
+
+                        <div class="project-card__blocks">
+
+                            <div class="project-block">
+                                <p class="project-block__label">Descripción</p>
+                                <p class="project-block__text">
+                                    Diseño e implementación de una infraestructura tecnológica completa y escalable
+                                    para una tienda online, integrando dos sedes físicas (Barcelona y Madrid) con
+                                    servicios avanzados en Microsoft Azure. Desde la planificación legal hasta el
+                                    despliegue de servidores, redes corporativas y seguridad perimetral.
+                                </p>
+                            </div>
+
+                            <div class="project-block">
+                                <p class="project-block__label">Mi Rol</p>
+                                <p class="project-block__text">
+                                    <strong>Administrador de Sistemas y Redes</strong> responsable de la identidad
+                                    corporativa, los servicios de red críticos, la infraestructura cloud en Azure,
+                                    la seguridad perimetral y la automatización de backups.
+                                </p>
+                            </div>
+
+                            <div class="project-block">
+                                <p class="project-block__label">Hitos Técnicos</p>
+                                <ul class="project-block__list">
+                                    <li><strong>Active Directory multi-sede:</strong> Bosque con confianza
+                                        bidireccional, GPOs de Roaming y unidades compartidas.</li>
+                                    <li><strong>DNS / DHCP:</strong> Zonas inversas, reenviadores y filtrado MAC.</li>
+                                    <li><strong>Microsoft Azure:</strong> VMs Linux para web y backup; Windows
+                                        Server Core integrado en el dominio.</li>
+                                    <li><strong>Seguridad:</strong> CCProxy, hMailServer + Roundcube, SSL/TLS,
+                                        SFTP/SCP.</li>
+                                    <li><strong>Backups automáticos:</strong> Cron + Duplicity hacia Azure.</li>
+                                    <li><strong>E-commerce:</strong> Frontend HTML/CSS/JS + backend PHP y MySQL.</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-block">
+                                <p class="project-block__label">Competencias</p>
+                                <ul class="project-block__list">
+                                    <li><strong>Sistemas:</strong> Windows Server 2022, Ubuntu Server, VMware ESXi.</li>
+                                    <li><strong>Cloud:</strong> Microsoft Azure — VMs, Networking, Storage.</li>
+                                    <li><strong>Redes / Seguridad:</strong> DNS, DHCP, OpenSSL, SSH, CCProxy.</li>
+                                    <li><strong>Desarrollo:</strong> PHP, MySQL, Apache, XAMPP, JavaScript.</li>
+                                    <li><strong>Gestión:</strong> Gantt, Trello, Ágil, LOPD/GDPR.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="tech-list">
+                            <span>Windows Server 2022</span>
+                            <span>Active Directory</span>
+                            <span>Microsoft Azure</span>
+                            <span>VMware ESXi</span>
+                            <span>DNS / DHCP</span>
+                            <span>SSL / TLS</span>
+                            <span>Duplicity + Cron</span>
+                            <span>PHP / MySQL</span>
+                            <span>Apache</span>
+                            <span>hMailServer</span>
+                            <span>CCProxy</span>
+                            <span>LOPD / GDPR</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── Próximamente 02 ──────────────────────────────────── -->
+                <article class="project-card project-card--soon">
+                    <div class="project-card__soon-inner">
+                        <p class="project-card__soon-num">02</p>
+                        <div class="project-card__soon-dot"></div>
+                        <p class="project-card__soon-label">Próximamente</p>
+                        <p class="project-card__soon-hint">Nuevo proyecto en preparación</p>
+                    </div>
+                </article>
+
+                <!-- ── Próximamente 03 ──────────────────────────────────── -->
+                <article class="project-card project-card--soon">
+                    <div class="project-card__soon-inner">
+                        <p class="project-card__soon-num">03</p>
+                        <div class="project-card__soon-dot"></div>
+                        <p class="project-card__soon-label">Próximamente</p>
+                        <p class="project-card__soon-hint">Nuevo proyecto en preparación</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <hr class="divider" />
+
+
+        <!-- ══════════════════════════ MI VALOR ═══════════════════════════════════ -->
+        <section id="valor" class="value section wrap">
+            <div class="section__header">
+                <p class="label">03 / Mi valor en tu empresa</p>
+                <h2 class="section-title">No vendes tecnología.<br>Vendes tiempo y dinero.</h2>
+            </div>
+
+            <div class="value__grid">
+                <div class="value-block">
+                    <p class="value-block__num">01</p>
+                    <h3 class="value-block__title">Productividad sin pausas</h3>
+                    <p class="value-block__body">
+                        Mi diagnóstico rápido de hardware y software reduce el tiempo de inactividad de los
+                        empleados. Cada hora de ordenador parado es dinero perdido. Yo lo evito.
+                    </p>
+                </div>
+                <div class="value-block">
+                    <p class="value-block__num">02</p>
+                    <h3 class="value-block__title">Seguridad proactiva</h3>
+                    <p class="value-block__body">
+                        Mantengo los sistemas actualizados y respaldados con estrategias de backup probadas.
+                        Prevengo pérdidas de datos críticas antes de que ocurran, no solo cuando ya es tarde.
+                    </p>
+                </div>
+                <div class="value-block">
+                    <p class="value-block__num">03</p>
+                    <h3 class="value-block__title">Soporte que suma al equipo</h3>
+                    <p class="value-block__body">
+                        La informática puede causar frustración. Mi soporte HelpDesk es cercano, claro y paciente.
+                        Los empleados trabajan con menos estrés y más confianza en su tecnología.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider" />
+
+    </main>
+
+    <!-- ═══════════════════════════════ FOOTER ════════════════════════════════ -->
+    <footer id="contacto" class="footer wrap">
+        <h2 class="footer__headline">Contacto</h2>
+
+        <div class="fake-console" id="fake-console" style="margin-bottom: 48px;">
+            <div class="fake-console__header">
+                <div class="fake-console__buttons">
+                    <span></span><span></span><span></span>
+                </div>
+                <p class="fake-console__title">root@portfolio:~/contacto</p>
+            </div>
+            <div class="fake-console__body" id="console-body">
+                <!-- JS will print text here -->
+            </div>
+        </div>
+
+        <div class="footer__links">
+            <a href="mailto:ikeraugusto2412@gmail.com" class="footer__link">ikeraugusto2412@gmail.com</a>
+            <a href="https://drive.google.com/file/d/1X0GqgfubbgWhrhbV8PtTkphD7-yjmd_S/view?usp=drive_link"
+                class="btn btn--solid" download>Descargar CV (PDF)</a>
+            <a href="https://www.linkedin.com/in/iker-augusto-espinosa-5619a6345" target="_blank" rel="noopener"
+                class="footer__link">LinkedIn ↗</a>
+        </div>
+        <p class="footer__copy">© 2026 Iker Augusto — Portfolio Técnico IT</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
