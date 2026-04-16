@@ -60,6 +60,13 @@ html {
   }
 }
 
+@media (hover: none) and (pointer: coarse), (max-width: 768px) {
+  #cursor-dot,
+  #cursor-ring {
+    display: none !important;
+  }
+}
+
 #cursor-dot,
 #cursor-ring {
   position: fixed;
